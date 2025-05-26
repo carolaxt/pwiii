@@ -1,0 +1,133 @@
+/* Estilização geral e fontes */
+@font-face {
+    font-family: "Amoria";
+    src: url("../fonts/amoria/AMORIA.otf") format("opentype");
+    font-display: swap;
+}
+
+body {
+    background-color: #000000; /* Preto */
+    color: #fff; /* Texto branco */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: "Amoria", cursive;
+    color: #e49dc9; /* Rosa */
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: clamp(2em, 5vw, 2.8em);
+    line-height: 1.2;
+    padding: 0 10px;
+}
+
+/* Estilo do formulário */
+form {
+    background-color: #615960; /* Cinza escuro */
+    padding: 30px 40px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Container de input e labels */
+.form-group {
+    width: 100%;
+    text-align: center; /* Centraliza o texto (label) dentro do form-group */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #f0f0f0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: calc(100% - 28px); /* Reduz a largura para compensar padding e border e permitir centralização */
+    /* ou use width: 100% e adicione margin: 0 auto; para centralizar o bloco */
+    padding: 14px;
+    border: 1px solid #4b454a;
+    border-radius: 8px;
+    background-color: #4b454a;
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Centraliza o input horizontalmente */
+    display: block; /* Garante que margin auto funcione para centralizar */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #e49dc9;
+    box-shadow: 0 0 0 3px rgba(228, 157, 201, 0.4);
+}
+
+/* Estilo do placeholder para ser mais discreto */
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center; /* Centraliza o texto do placeholder */
+}
+
+
+/* Botão */
+button {
+    background-color: #e49dc9; /* Rosa */
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #d380b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #c270a2;
+    transform: translateY(0);
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 500px) {
+    form {
+        padding: 25px 25px;
+        margin: 0 15px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    form {
+        padding: 20px 20px;
+    }
+}

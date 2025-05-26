@@ -1,0 +1,53 @@
+body {
+    background-color: #000000;
+    color: rgb(19, 18, 18); /* Opcional: deixa o texto branco para melhor contraste */
+    font-family: Arial, sans-serif; /* Fonte opcional */
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.custom-table {
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #fdceef; /* fundo preto */
+    color: rgb(139, 127, 127);
+    box-shadow: 0 0 10px rgba(233, 170, 194, 0.3); /* sombra vermelha */
+    font-family: Arial, sans-serif;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 12px 16px;
+    border: 1px solid #d3ccd1; /* borda cinza escura */
+    text-align: center;
+}
+
+.custom-table th {
+    background-color: #ff9ae6; /* vermelho escuro */
+    color: rgb(139, 127, 127);
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #fcdcec; /* cinza escuro */
+}
+
+.custom-table tr:hover {
+    background-color: rgb(247, 190, 225); /* tom mais claro ao passar o mouse */
+}
+
+.custom-table .btn-danger {
+    background-color: rgb(223, 144, 205);
+    border: none;
+}
+
+.custom-table .btn-info {
+    background-color: rgb(224, 193, 217);
+    color: #333333;
+    border: 1px solid rgb(223, 144, 205);
+}

@@ -1,0 +1,163 @@
+
+
+:root {
+    --cor-primaria: #e49dc9;
+    --cor-primaria-hover: #574fd6;
+    --cor-fundo-claro: #333333;
+    --cor-card-fundo: #ffffff;
+    --cor-sombra-card: rgba(0, 0, 0, 0.08);
+    --cor-texto-principal: #333333;
+    --cor-texto-secundario: #666666;
+    --cor-borda-input: #dddddd;
+    --cor-erro: #e73c5e;
+    --cor-sucesso: #6aae8f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Amoria";
+    src: url("../fonts/amoria/AMORIA.otf") format("opentype");
+    font-display: swap;
+}
+
+body {
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--cor-card-fundo);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--cor-sombra-card);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: var(--cor-texto-principal);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input {
+    padding: 14px 15px;
+    font-size: 1em;
+    border: 1px solid var(--cor-borda-input);
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: var(--cor-texto-principal);
+}
+
+input::placeholder {
+    color: var(--cor-texto-secundario);
+    opacity: 0.7;
+}
+
+input:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+    outline: none;
+}
+
+button {
+    padding: 14px 20px;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    background-color: var(--cor-primaria);
+}
+
+p {
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: var(--cor-texto-secundario);
+    line-height: 1.5;
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-primaria-hover);
+    text-decoration: underline;
+}
+
+.error {
+    color: var(--cor-erro);
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid var(--cor-erro);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.success {
+    color: var(--cor-sucesso);
+    background-color: rgba(40, 167, 69, 0.1);
+    border: 1px solid var(--cor-sucesso);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 25px;
+        margin: 10px;
+        box-shadow: 0 4px 15px var(--cor-sombra-card);
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    input, button {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+
+    p {
+        font-size: 0.85em;
+    }
+}

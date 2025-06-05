@@ -76,7 +76,7 @@ class Usuario{
     }
 }
 
-    public function removerUsuario($id){
+    public function delUser($id){
         $sql = "DELETE FROM usuarios WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(":id" , $id, PDO::PARAM_INT);

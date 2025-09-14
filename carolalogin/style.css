@@ -1,0 +1,84 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #ff8ecf, #b966d0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    border: 3px solid #ffb6e6;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 0 25px rgba(255, 182, 230, 0.8), 0 0 40px rgba(185, 102, 208, 0.6);
+    text-align: center;
+    width: 320px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ff8ecf;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    border-color: #b966d0;
+    box-shadow: 0 0 8px #ff8ecf;
+}
+
+form input[type="submit"] {
+    width: 45%;
+    padding: 12px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ff8ecf, #b966d0);
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #ff8ecf, 0 0 20px #b966d0;
+}
+
+h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 36px;
+    color: #ffebf7;
+    text-shadow: 2px 2px 6px #b966d0, 0 0 10px #ff8ecf;
+    margin-bottom: 15px;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+    padding: 0;
+}
